@@ -40,6 +40,7 @@ export interface MapTemplateConfig extends TemplateConfig {
   onAlertActionPressed?(e: { secondary?: boolean; primary?: boolean }): void;
   onMapButtonPressed?(e: { id: string; template: string }): void;
   onPanWithDirection?(e: { direction: string }): void;
+  onPanGestureWithVelocity?(e: { velocity: { x: number, y: number }}): void;
   onPanBeganWithDirection?(e: { direction: string }): void;
   onPanEndedWithDirection?(e: { direction: string }): void;
   onSelectedPreviewForTrip?(e: { tripId: string; routeIndex: number }): void;
@@ -68,6 +69,7 @@ export class MapTemplate extends Template<MapTemplateConfig> {
       alertActionPressed: 'onAlertActionPressed',
       mapButtonPressed: 'onMapButtonPressed',
       panWithDirection: 'onPanWithDirection',
+      didEndPanGestureWithVelocity: 'onPanGestureWithVelocity',
       panBeganWithDirection: 'onPanBeganWithDirection',
       panEndedWithDirection: 'onPanEndedWithDirection',
       selectedPreviewForTrip: 'onSelectedPreviewForTrip',

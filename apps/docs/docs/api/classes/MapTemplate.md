@@ -84,6 +84,7 @@ templates/Template.ts:92
 | `panBeganWithDirection` | `string` |
 | `panEndedWithDirection` | `string` |
 | `panWithDirection` | `string` |
+| `didEndPanGestureWithVelocity` | `string` |
 | `selectedPreviewForTrip` | `string` |
 | `startedTrip` | `string` |
 
